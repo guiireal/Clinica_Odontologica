@@ -68,7 +68,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnCadastroPaciente.setBounds(90, 40, 70, 60);
 
         btnCadastroDentista.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/guiireal/resource/images/dentista.png"))); // NOI18N
-        btnCadastroDentista.setToolTipText("Médicos");
+        btnCadastroDentista.setToolTipText("Dentistas");
+        btnCadastroDentista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                abrirFormularioCadastroDentista(evt);
+            }
+        });
         jpnInterno.add(btnCadastroDentista);
         btnCadastroDentista.setBounds(10, 40, 70, 60);
 
@@ -136,6 +141,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jmiDentistas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.ALT_MASK));
         jmiDentistas.setText("Dentistas");
+        jmiDentistas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                abrirFormularioCadastroDentista(evt);
+            }
+        });
         jmnCadastros.add(jmiDentistas);
 
         jmiPacientes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK));
@@ -216,6 +226,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void versaoSistema(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_versaoSistema
         JOptionPane.showMessageDialog(null, "versão 1.0.0 beta", "Informação", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_versaoSistema
+
+    private void abrirFormularioCadastroDentista(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirFormularioCadastroDentista
+        FormularioCadastroDentista formulario = new FormularioCadastroDentista();
+        formulario.setVisible(true);
+    }//GEN-LAST:event_abrirFormularioCadastroDentista
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgenda;
